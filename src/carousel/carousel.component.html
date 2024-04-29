@@ -1,0 +1,32 @@
+<div #carousel class="carousel" (click)="selectSlide($any($event.target))">
+  <button data-id="0" class="slide">1</button>
+  <button data-id="1" class="slide">2</button>
+  <button data-id="2" class="slide">3</button>
+  <button data-id="3" class="slide">4</button>
+
+  <button data-id="0" class="slide">1</button>
+  <button data-id="1" class="slide">2</button>
+  <button data-id="2" class="slide">3</button>
+  <button data-id="3" class="slide">4</button>
+
+  <button data-id="0" class="slide">1</button>
+  <button data-id="1" class="slide">2</button>
+  <button data-id="2" class="slide">3</button>
+  <button data-id="3" class="slide">4</button>
+
+  <button data-id="0" class="slide">1</button>
+  <button data-id="1" class="slide">2</button>
+  <button data-id="2" class="slide">3</button>
+  <button data-id="3" class="slide">4</button>
+</div>
+
+<div class="carousel-nav">
+  <button
+    *ngFor="let item of [].constructor(4); let i = index"
+    [ngStyle]="{
+      'background-color': activeSlideIndex % 4 === i ? 'chocolate' : 'darkgray'
+    }"
+    class="carousel-nav__item"
+    (click)="slideByNav(i)"
+  ></button>
+</div>
